@@ -7,7 +7,7 @@
 0. Fix & Optimize System `DNS` Settings:
 
     Clean the `/etc/resolv.conf` and Add:
-    - _`1.1.1.1`_  - _`1.0.0.1`_  - _`8.8.8.8`_  - _`8.8.4.4`_
+    - _`1.1.1.1`_  - _`1.0.0.1`_
 
 
 1. Update, Upgrade, and Clean the server:
@@ -58,10 +58,6 @@
     - Soft & Hard `nproc` limits.
     - Soft & Hard `nofile` limits.
     
-    
-10. Optimize `UFW` & Open Common Ports.
-    - Open Ports `21`, `22`, `80`, `443`.
-    - With `IPv6`, `TCP` & `UDP`.
 
     
 Reboot at the end.
@@ -81,7 +77,7 @@ sudo apt install -y curl
 ## Run
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/hawshemi/Ubuntu-Optimizer/main/ubuntu-optimizer.sh)
+bash <(curl -s https://raw.githubusercontent.com/GetPHP-IR/Ubuntu-Optimizer/main/ubuntu-optimizer.sh)
 ```
 
 
