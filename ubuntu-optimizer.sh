@@ -52,8 +52,8 @@ fix_dns() {
 
   echo 'nameserver 1.1.1.1' >> $DNS_PATH
   echo 'nameserver 1.0.0.1' >> $DNS_PATH
-  echo 'nameserver 8.8.8.8' >> $DNS_PATH
-  echo 'nameserver 8.8.4.4' >> $DNS_PATH
+  # echo 'nameserver 8.8.8.8' >> $DNS_PATH
+  # echo 'nameserver 8.8.4.4' >> $DNS_PATH
   
   echo 
   echo "$(tput setaf 2)----- System DNS Optimized.$(tput sgr0)"
@@ -91,11 +91,13 @@ installations() {
   sleep 1
 
   # Purge firewalld to install UFW.
-  sudo apt -y purge firewalld
+  # sudo apt -y purge firewalld
 
   # Install
-  sudo apt -y install software-properties-common build-essential apt-transport-https iptables iptables-persistent lsb-release ca-certificates ubuntu-keyring gnupg2 apt-utils cron bash-completion 
-  sudo apt -y install curl git zip unzip ufw wget preload locales nano vim python3 python3-pip jq qrencode socat busybox net-tools haveged htop libssl-dev libsqlite3-dev
+  # sudo apt -y install software-properties-common build-essential apt-transport-https iptables iptables-persistent lsb-release ca-certificates ubuntu-keyring gnupg2 apt-utils cron bash-completion 
+  # sudo apt -y install curl git zip unzip ufw wget preload locales nano vim python3 python3-pip jq qrencode socat busybox net-tools haveged htop libssl-dev libsqlite3-dev
+  sudo apt -y install software-properties-common apt-transport-https iptables lsb-release ca-certificates ubuntu-keyring gnupg2 apt-utils cron bash-completion iptables-persistent build-essential libssl-dev
+  sudo apt -y install curl git unzip ufw wget preload locales nano vim python3 jq net-tools haveged htop libsqlite3-dev 
   sleep 0.5
   echo 
   echo "$(tput setaf 2)----- Useful Packages Installed Succesfully.$(tput sgr0)"
@@ -393,8 +395,8 @@ sleep 0.5
 limits_optimizations
 sleep 1
 
-ufw_optimizations
-sleep 0.5
+# ufw_optimizations
+# sleep 0.5
 
 
 # Outro
