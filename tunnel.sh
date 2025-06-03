@@ -12,9 +12,10 @@ echo "Starting server update process..."
 sudo apt update && sudo apt upgrade -y
 echo "Server update completed successfully."
 
-echo "Changing directory to /opt..."
-# Change directory to /opt
-cd /opt
+echo "Changing directory to /opt/tunnel..."
+# Change directory to /opt/tunnel
+mkdir -p /opt/tunnel
+cd /opt/tunnel
 echo "Current directory: $(pwd)"
 
 echo "Downloading and executing Ubuntu optimizer script..."
