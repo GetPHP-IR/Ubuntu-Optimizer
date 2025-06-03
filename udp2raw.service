@@ -1,0 +1,11 @@
+[Unit]
+Description=udp2raw Simple Tunnel
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/udp2raw -c -l127.0.0.1:51820 -r[ip]:8080 -k "passcode" --raw-mode icmp -a
+
+[Install]
+WantedBy=multi-user.target

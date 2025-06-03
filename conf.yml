@@ -1,0 +1,11 @@
+services:
+  - name: service-0
+    addr: :[port]
+    handler:
+      type: [type]
+    listener:
+      type: [type]
+    forwarder:
+      nodes:
+        - name: target-0
+          addr: [localip]:[port]
