@@ -48,7 +48,7 @@ echo "Downloaded udp2raw_binaries.tar.gz archive removed."
 
 echo "Installing gost..."
 # Download and execute the gost installation script
-sudo bash <(curl -fsSL https://github.com/go-gost/gost/raw/master/install.sh) --install
+sudo bash <(curl -fsSL https://github.com/go-gost/gost/raw/master/install.sh)
 echo "gost installed successfully."
 
 echo "Creating directory for gost configuration..."
