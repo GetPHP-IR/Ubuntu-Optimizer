@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# bash <(curl -fsSL https://raw.githubusercontent.com/GetPHP-IR/Ubuntu-Optimizer/refs/heads/main/tunnel.sh)
-
 # Script to update Ubuntu, install optimizer, udp2raw, gost, wireguard-tools, and configure services
 
 # Exit immediately if a command exits with a non-zero status.
@@ -58,7 +56,7 @@ rm -f udp2raw_binaries.tar.gz
 echo "Downloaded udp2raw_binaries.tar.gz archive removed from $(pwd)."
 
 echo "Installing gost..."
-# Inlined content of https://raw.githubusercontent.com/go-gost/gost/master/install.sh
+# User-provided inlined content for gost installation
 sudo bash -s -- --install << 'GOST_INSTALL_EOF'
 
 # Check Root User
@@ -128,13 +126,14 @@ install_gost() {
 
     # Download the binary
     echo "Downloading gost version $version..."
-    curl -fsSL -o gost.tar.gz $download_url
+    curl -fsSL -o gost.tar.gz "$download_url" # Ensure $download_url is quoted if it can contain spaces, though unlikely here.
 
     # Extract and install the binary
     echo "Installing gost..."
     tar -xzf gost.tar.gz
     chmod +x gost
     mv gost /usr/local/bin/gost
+    rm -f gost.tar.gz # Clean up downloaded archive
 
     echo "gost installation completed!"
 }
@@ -142,11 +141,20 @@ install_gost() {
 # Retrieve available versions from GitHub API
 versions=$(curl -s "$base_url" | grep -oP 'tag_name": "\K[^"]+')
 
+if [ -z "$versions" ]; then
+    echo "Could not retrieve gost versions from GitHub API."
+    exit 1
+fi
+
 # Install the latest version automatically
 latest_version=$(echo "$versions" | head -n 1)
-install_gost $latest_version
+if [ -z "$latest_version" ]; then
+    echo "Could not determine the latest gost version."
+    exit 1
+fi
+install_gost "$latest_version"
 
-# exit 1
+# exit 1 # This was commented out in your provided script
 GOST_INSTALL_EOF
 
 # Check the exit status of the inlined gost installation script
