@@ -5,7 +5,7 @@ Wants=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/udp2raw -c -l127.0.0.1:51820 -r[ip]:[port] -k "passcode" --raw-mode icmp -a
+ExecStart=/usr/local/bin/udp2raw -c -l127.0.0.1:51820 -r[ip]:[port] -k "[passcode]" --raw-mode icmp -a
 
 [Install]
 WantedBy=multi-user.target
