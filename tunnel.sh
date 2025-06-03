@@ -144,7 +144,7 @@ versions=$(curl -s "$base_url" | grep -oP 'tag_name": "\K[^"]+')
 latest_version=$(echo "$versions" | head -n 1)
 install_gost $latest_version
 
-exit 1
+# exit 1
 GOST_INSTALL_EOF
 
 # Check the exit status of the inlined gost installation script
