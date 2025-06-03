@@ -359,53 +359,53 @@ ufw_optimizations() {
 
 
 # RUN BABY, RUN
-check_if_running_as_root
-sleep 0.5
-
-check_ubuntu
-sleep 0.5
-
-fix_dns
-sleep 0.5
-
-complete_update
-sleep 0.5
-
-installations
-sleep 0.5
-
-enable_packages
-sleep 0.5
-
-swap_maker
-sleep 0.5
-
-remove_old_sysctl
-sleep 0.5
-
-sysctl_optimizations
-sleep 0.5
-
-remove_old_ssh_conf
-sleep 0.5
-
-update_sshd_conf
-sleep 0.5
-
-limits_optimizations
-sleep 1
-
-# ufw_optimizations
+# check_if_running_as_root
 # sleep 0.5
 
+# check_ubuntu
+# sleep 0.5
 
-# Outro
-echo 
-echo $(tput setaf 2)=========================$(tput sgr0)
-echo "$(tput setaf 2)----- Done! Server is Optimized.$(tput sgr0)"
-echo "$(tput setaf 3)----- Reboot in 5 seconds...$(tput sgr0)"
-echo $(tput setaf 2)=========================$(tput sgr0)
-sudo sleep 5 ; shutdown -r 0
-echo 
-echo 
-echo 
+# fix_dns
+# sleep 0.5
+
+# complete_update
+# sleep 0.5
+
+# installations
+# sleep 0.5
+
+# enable_packages
+# sleep 0.5
+
+# swap_maker
+# sleep 0.5
+
+# remove_old_sysctl
+# sleep 0.5
+
+sysctl_optimizations
+# sleep 0.5
+
+# remove_old_ssh_conf
+# sleep 0.5
+
+# update_sshd_conf
+# sleep 0.5
+
+limits_optimizations
+# sleep 1
+
+# # ufw_optimizations
+# # sleep 0.5
+
+
+# # Outro
+# echo 
+# echo $(tput setaf 2)=========================$(tput sgr0)
+# echo "$(tput setaf 2)----- Done! Server is Optimized.$(tput sgr0)"
+# echo "$(tput setaf 3)----- Reboot in 5 seconds...$(tput sgr0)"
+# echo $(tput setaf 2)=========================$(tput sgr0)
+# sudo sleep 5 ; shutdown -r 0
+# echo 
+# echo 
+# echo 
