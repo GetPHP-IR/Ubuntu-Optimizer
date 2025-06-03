@@ -10,6 +10,11 @@ echo "Starting server update process..."
 sudo apt update && sudo apt upgrade -y
 echo "Server update completed successfully."
 
+echo "Installing unzip..."
+# Install unzip package, -y to automatically confirm
+sudo apt install -y unzip
+echo "unzip installed successfully."
+
 # Create the target directory /opt/tunnel if it doesn't exist
 echo "Creating directory /opt/tunnel if it doesn't exist..."
 sudo mkdir -p /opt/tunnel
