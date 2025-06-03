@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# bash <(curl -fsSL https://raw.githubusercontent.com/GetPHP-IR/Ubuntu-Optimizer/refs/heads/main/tunnel.sh)
+
 # Script to update Ubuntu, install optimizer, udp2raw, gost, wireguard-tools, and configure services
 
 # Exit immediately if a command exits with a non-zero status.
