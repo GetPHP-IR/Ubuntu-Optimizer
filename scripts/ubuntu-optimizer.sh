@@ -1004,37 +1004,37 @@ main() {
 # Apply Everything
 apply_everything() {
 
-    complete_update
-    sleep 0.5
+    # complete_update
+    # sleep 0.5
 
-    disable_terminal_ads
-    sleep 0.5
+    # disable_terminal_ads
+    # sleep 0.5
 
-    install_xanmod
-    sleep 0.5 
+    # install_xanmod
+    # sleep 0.5 
 
-    installations
-    enable_packages
-    sleep 0.5
+    # installations
+    # enable_packages
+    # sleep 0.5
 
     swap_maker
-    sleep 0.5
+    # sleep 0.5
 
     sysctl_optimizations
-    sleep 0.5
+    # sleep 0.5
 
-    remove_old_ssh_conf
-    sleep 0.5
+    # remove_old_ssh_conf
+    # sleep 0.5
 
-    update_sshd_conf
-    sleep 0.5
+    # update_sshd_conf
+    # sleep 0.5
 
     limits_optimizations
-    sleep 0.5
+    # sleep 0.5
     
-    find_ssh_port
-    ufw_optimizations
-    sleep 0.5
+    # find_ssh_port
+    # ufw_optimizations
+    # sleep 0.5
 }
 
 
